@@ -24,7 +24,19 @@ struct ContentView: View {
             }
             .font(.title)
             .frame(width: 250)
+            
+            Group {
+                salaryCheck {
+                    Text("\(price())円")
+                        .font(.title)
+                }
+            }.frame(width:300, height: 30)
         }
+        .position(x:200, y:200)
+    }
+    
+    func salaryCheck(min:Int, max:Int) -> Bool {
+        _ = Int(salary)
     }
 }
 
