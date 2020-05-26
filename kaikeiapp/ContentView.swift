@@ -9,8 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var salary:String = ""
+    let tanka:Double = 250
+    let tax:Double = 1.1
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack (alignment: .leading){
+            HStack {
+                Text("給料：").padding(.horizontal, 0)
+                TextField("0", text: $salary)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    .frame(width: 150)
+            }
+            .font(.title)
+            .frame(width: 250)
+        }
     }
 }
 
