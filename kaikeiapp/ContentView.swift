@@ -8,6 +8,16 @@
 
 import SwiftUI
 
+extension UIApplication{
+func endEditing(){
+    sendAction(
+        #selector(UIResponder.resignFirstResponder),
+        to:nil, from:nil, for:nil
+        )
+    }
+}
+    
+
 struct ContentView: View {
     @State var salary:String = ""
     let tanka:Double = 250
