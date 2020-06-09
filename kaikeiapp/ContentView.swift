@@ -21,10 +21,16 @@ func endEditing(){
 struct ContentView: View {
     @State var salary:String = ""
     let tanka:Double = 250
-    let tax:Double = 1.1
+//    let tax:Double = 1.1
     
     var body: some View {
-//        VStack (alignment: .leading){
+        ZStack {
+            Color.white
+                .onTapGesture {
+                    UIApplication.shared.endEditing()
+                }
+        
+        VStack (alignment: .leading){
             HStack {
                 Text("給料：").padding(.horizontal, 0)
                 TextField("0", text: $salary)
@@ -36,18 +42,19 @@ struct ContentView: View {
             .font(.title)
             .frame(width: 250)
                 
-        Group{
-            if salaryCheck(min: 1, max: 1000000) {
-                Text("\(price())円です。")
+            Group{
+                if salaryCheck(min: 1, max: 1000000) {
+//                Text("\(price())円です。")
                     .font(.title)
-            } else {
-                Text("金額は正しい金額を入れてください")
-                    .foregroundColor(.red)
-                    .font(.headline)
-            }
-        }.frame(width: 300, height: 30)
+                } else {
+                    Text("金額は正しい金額を入れてください")
+                        .foregroundColor(.red)
+                        .font(.headline)
+                }
+            }.frame(width: 300, height: 30)
+        }
+//        .position(x:200, y:200)
     }
-        .position(x:200, y:200)
 }
 
 func salaryCheck(min:Int, max:Int) -> Bool {
