@@ -18,13 +18,25 @@ func endEditing(){
 }
 
 struct ContentView: View {
-    @State var salary:Int
+    @State var salary:Int = ""
     let kotei:Double
     let chokin:Double
     let special:Double
 
-//    var body: some View {
-//        ZStack {
+    var body: some View {
+        VStack (alignment: .leading){
+            HStack {
+                Text("給料：").padding(.horizontal, 0)
+                TextField("0", text: $salary)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    .frame(width: 100)
+            }
+            .font(.title)
+            .frame(width: 250)
+            
+        
+
 //            Color.white
 //                .onTapGesture {
 //                    UIApplication.shared.endEditing()
