@@ -31,28 +31,11 @@ struct ContentView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     .frame(width: 100)
+                Text("円")
             }
             .font(.title)
             .frame(width: 250)
-            
-        
 
-//            Color.white
-//                .onTapGesture {
-//                    UIApplication.shared.endEditing()
-//                }
-//
-//        VStack (alignment: .leading){
-//            HStack {
-//                Text("給料：").padding(.horizontal, 0)
-//                TextField("0", text: $salary)
-//                    .textFieldStyle(RoundedBorderTextFieldStyle())
-//                    .keyboardType(.numberPad)
-//                    .frame(width: 100)
-//                Text("円")
-//            }
-//            .font(.title)
-//            .frame(width: 250)
 //
 //            Group{
 //                if salaryCheck(min: 1, max: 1000000) {
