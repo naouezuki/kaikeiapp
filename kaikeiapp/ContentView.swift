@@ -24,6 +24,7 @@ struct ContentView: View {
     let special:Double
 
     var body: some View {
+        
         VStack (alignment: .leading){
             HStack {
                 Text("給料：").padding(.horizontal, 0)
@@ -64,8 +65,8 @@ func totle() -> Int {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
